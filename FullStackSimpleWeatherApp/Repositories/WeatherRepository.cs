@@ -25,7 +25,6 @@ namespace FullStackSimpleWeatherApp.Repositories
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             var response = await httpClient.GetAsync(uri);
-            // if (response.IsSuccessStatusCode)
 
             var json = await response.Content.ReadAsStreamAsync();
             var weatherData = await JsonSerializer.DeserializeAsync<WeatherResponse>(json);

@@ -19,7 +19,7 @@ namespace FullStackSimpleWeatherApp.Controllers
             _weatherRepository = weatherRepository;
         }
 
-        ///api/layer/88
+        //api/weather/12345
         [HttpGet("{sZip}")]
         public async Task<IActionResult> Get(string sZip)
         {
